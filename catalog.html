@@ -2,142 +2,149 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 	<title>Веб студия Нёрдс</title>
 </head>
 <body>
 	<header class="main-header">
-		<div class="main-header__logo">
-			<img alt="" height="" src="" width="">
+		<div class="container">
+			<div class="main-header__logo">
+				<img alt="" height="" src="" width="">
+			</div>
+			<nav class="main-nav">
+				<ul class="main-nav__list">
+					<li class="main-nav__item"><a href="#">Студия</a></li>
+					<li class="main-nav__item"><a href="#">Клиенты</a></li>
+					<li class="main-nav__item"><a href="#">Магазин</a></li>
+					<li class="main-nav__item"><a href="#">Контакты</a></li>
+				</ul>
+				<div class="main-nav__basket-item">Корзина</div>
+			</nav>
+			<h1 class="main-header__title">Магазин готовых шаблонов</h1>
 		</div>
-		<nav class="main-nav">
-			<ul class="main-nav__list">
-				<li class="main-nav__item">Студия</li>
-				<li class="main-nav__item">Клиенты</li>
-				<li class="main-nav__item">Магазин</li>
-				<li class="main-nav__item">Контакты</li>
-			</ul>
-			<div class="main-nav__basket-item">Корзина</div>
-		</nav>
-		<h1 class="main-header__title">Магазин готовых шаблонов</h1>
 	</header>
 	<main class="inner-main">
-		<form action="a.php" class="form-sort">
-			<div class="form-sort__title">Стоимость:</div>
-			<div class="form-range">
-				<div class="form-range__scale"></div>
-				<div class="form-range__toggle-min"></div>
-				<div class="form-range__toggle-max"></div>
-			</div>
-			<div class="form-sort__price-controls">
-				<label class="form-sort__price-min">от <input type="text" value="0" name="min"></label>
-				<label class="form-sort__price-max">до <input type="text" value="15 000" name="max"></label>
-			</div>
-			<div class="form-sort__title">Сетка:</div>
-			<label class="form-sort__radio"><input type="radio" name="site" value="adaptive">Адаптивная</label>
-			<label class="form-sort__radio"><input type="radio" name="site" value="fixed">Фиксированная</label>
-			<label class="form-sort__radio"><input type="radio" name="site" value="rubber">Резиновая</label>
-			<div class="form-sort__title">Особенности:</div>
-			<label class="form-sort__checkbox"><input type="checkbox" name="feature" value="slider">Слайдер</label>
-			<label class="form-sort__checkbox"><input type="checkbox" name="feature" value="advantages">Блок преимуществ</label>
-			<label class="form-sort__checkbox"><input type="checkbox" name="feature" value="news">Новости</label>
-			<label class="form-sort__checkbox"><input type="checkbox" name="feature" value="gallery">Галерея</label>
-			<label class="form-sort__checkbox"><input type="checkbox" name="feature" value="basket">Корзина</label>
-			<input type="submit" value="Показать" class="btn  btn-inner--middle  btn--grey">
-		</form>
-		<section class="templates">
-			<div class="templates-sort">
-				<div class="templates-sort__title">Сортировать:</div>
-				<button class="templates-sort__price">По цене</button>
-				<button class="templates-sort__type">По типу</button>
-				<button class="templates-sort__name">По названию</button>
-				<button class="templates-sort__first"></button>
-				<button class="templates-sort__end"></button>
-			</div>
-			<article class="template-sedona">
-				<div class="template-marker">
-					<div class="template-marker__marker1"></div>
-					<div class="template-marker__marker2"></div>
-					<div class="template-marker__marker3"></div>
+		<div class="container">
+			<form action="a.php" class="form-sort">
+				<div class="form-sort__title">Стоимость:</div>
+				<div class="form-range">
+					<div class="form-range__scale"></div>
+					<div class="form-range__toggle-min"></div>
+					<div class="form-range__toggle-max"></div>
 				</div>
-				<img src="" alt="" width="" height="">
-				<div class="template-popup">
-					<div class="template-popup__title">Sedona</div>
-					<div class="template-popup__text">Информационный сайт для туристов</div>
-					<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
+				<div class="form-sort__price-controls">
+					<label class="form-sort__price-min">от <input type="text" value="0" name="min"></label>
+					<label class="form-sort__price-max">до <input type="text" value="15 000" name="max"></label>
 				</div>
-			</article>
-			<article class="template-pink">
-				<div class="template-marker">
-					<div class="template-marker__marker1"></div>
-					<div class="template-marker__marker2"></div>
-					<div class="template-marker__marker3"></div>
+				<div class="form-sort__title">Сетка:</div>
+				<label class="form-sort__radio"><input type="radio" name="site" value="adaptive">Адаптивная</label>
+				<label class="form-sort__radio"><input type="radio" name="site" value="fixed">Фиксированная</label>
+				<label class="form-sort__radio"><input type="radio" name="site" value="rubber">Резиновая</label>
+				<div class="form-sort__title">Особенности:</div>
+				<label class="form-sort__checkbox"><input type="checkbox" name="feature" value="slider">Слайдер</label>
+				<label class="form-sort__checkbox"><input type="checkbox" name="feature" value="advantages">Блок преимуществ</label>
+				<label class="form-sort__checkbox"><input type="checkbox" name="feature" value="news">Новости</label>
+				<label class="form-sort__checkbox"><input type="checkbox" name="feature" value="gallery">Галерея</label>
+				<label class="form-sort__checkbox"><input type="checkbox" name="feature" value="basket">Корзина</label>
+				<input type="submit" value="Показать" class="btn  btn-inner--middle  btn--grey">
+			</form>
+			<section class="templates">
+				<div class="templates-sort">
+					<div class="templates-sort__title">Сортировать:</div>
+					<button class="templates-sort__price">По цене</button>
+					<button class="templates-sort__type">По типу</button>
+					<button class="templates-sort__name">По названию</button>
+					<button class="templates-sort__first"></button>
+					<button class="templates-sort__end"></button>
 				</div>
-				<img src="" alt="" width="" height="">
-				<div class="template-popup">
-					<div class="template-popup__title">Pink App</div>
-					<div class="template-popup__text">Продуктовый лендинг приложения для IOS и Android</div>
-					<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
-				</div>
-			</article>
-			<article class="template-barbershop">
-				<div class="template-marker">
-					<div class="template-marker__marker1"></div>
-					<div class="template-marker__marker2"></div>
-					<div class="template-marker__marker3"></div>
-				</div>
-				<img src="" alt="" width="" height="">
-				<div class="template-popup">
-					<div class="template-popup__title">Barbershop</div>
-					<div class="template-popup__text">Сайт салона красоты. Для мужчин, да.</div>
-					<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
-				</div>
-			</article>
-			<article class="template-mishka">
-				<div class="template-marker">
-					<div class="template-marker__marker1"></div>
-					<div class="template-marker__marker2"></div>
-					<div class="template-marker__marker3"></div>
-				</div>
-				<img src="" alt="" width="" height="">
-				<div class="template-popup">
-					<div class="template-popup__title">Mishka</div>
-					<div class="template-popup__text">Интернет магазиг вязанных игрушек</div>
-					<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
-				</div>
-			</article>
-			<article class="template-aplus">
-				<div class="template-marker">
-					<div class="template-marker__marker1"></div>
-					<div class="template-marker__marker2"></div>
-					<div class="template-marker__marker3"></div>
-				</div>
-				<img src="" alt="" width="" height="">
-				<div class="template-popup">
-					<div class="template-popup__title">A Plus</div>
-					<div class="template-popup__text">Лендинг курсов повышения квалификации</div>
-					<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
-				</div>
-			</article>
-			<article class="template-kvas">
-				<div class="template-marker">
-					<div class="template-marker__marker1"></div>
-					<div class="template-marker__marker2"></div>
-					<div class="template-marker__marker3"></div>
-				</div>
-				<img src="" alt="" width="" height="">
-				<div class="template-popup">
-					<div class="template-popup__title">Кваст</div>
-					<div class="template-popup__text">Промо-сайт производителя крафтового кваса</div>
-					<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
-				</div>
-			</article>
-			<ul class="pagination">
-				<li class="pagination__item"><a class="pagination__link" href="#">1</a></li>
-				<li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
-				<li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
-				<li class="pagination__item"><a class="btn  btn-inner--lg  btn--grey" href="#">Следующая</a></li>
-			</ul>
-		</section>
+				<article class="template-sedona">
+					<div class="template-marker">
+						<div class="template-marker__marker1"></div>
+						<div class="template-marker__marker2"></div>
+						<div class="template-marker__marker3"></div>
+					</div>
+					<img src="" alt="" width="" height="">
+					<div class="template-popup">
+						<div class="template-popup__title"><a href="#">Sedona</a></div>
+						<div class="template-popup__text">Информационный сайт для туристов</div>
+						<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
+					</div>
+				</article>
+				<article class="template-pink">
+					<div class="template-marker">
+						<div class="template-marker__marker1"></div>
+						<div class="template-marker__marker2"></div>
+						<div class="template-marker__marker3"></div>
+					</div>
+					<img src="" alt="" width="" height="">
+					<div class="template-popup">
+						<div class="template-popup__title"><a href="#">Pink App</a></div>
+						<div class="template-popup__text">Продуктовый лендинг приложения для IOS и Android</div>
+						<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
+					</div>
+				</article>
+				<article class="template-barbershop">
+					<div class="template-marker">
+						<div class="template-marker__marker1"></div>
+						<div class="template-marker__marker2"></div>
+						<div class="template-marker__marker3"></div>
+					</div>
+					<img src="" alt="" width="" height="">
+					<div class="template-popup">
+						<div class="template-popup__title"><a href="#">Barbershop</a></div>
+						<div class="template-popup__text">Сайт салона красоты. Для мужчин, да.</div>
+						<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
+					</div>
+				</article>
+				<article class="template-mishka">
+					<div class="template-marker">
+						<div class="template-marker__marker1"></div>
+						<div class="template-marker__marker2"></div>
+						<div class="template-marker__marker3"></div>
+					</div>
+					<img src="" alt="" width="" height="">
+					<div class="template-popup">
+						<div class="template-popup__title"><a href="#">Mishka</a></div>
+						<div class="template-popup__text">Интернет магазиг вязанных игрушек</div>
+						<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
+					</div>
+				</article>
+				<article class="template-aplus">
+					<div class="template-marker">
+						<div class="template-marker__marker1"></div>
+						<div class="template-marker__marker2"></div>
+						<div class="template-marker__marker3"></div>
+					</div>
+					<img src="" alt="" width="" height="">
+					<div class="template-popup">
+						<div class="template-popup__title"><a href="#">A Plus</a></div>
+						<div class="template-popup__text">Лендинг курсов повышения квалификации</div>
+						<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
+					</div>
+				</article>
+				<article class="template-kvas">
+					<div class="template-marker">
+						<div class="template-marker__marker1"></div>
+						<div class="template-marker__marker2"></div>
+						<div class="template-marker__marker3"></div>
+					</div>
+					<img src="" alt="" width="" height="">
+					<div class="template-popup">
+						<div class="template-popup__title"><a href="#">Кваст</a></div>
+						<div class="template-popup__text">Промо-сайт производителя крафтового кваса</div>
+						<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
+					</div>
+				</article>
+				<ul class="pagination">
+					<li class="pagination__item"><a class="pagination__link" href="#">1</a></li>
+					<li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+					<li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+					<li class="pagination__item"><a class="btn  btn-inner--lg  btn--grey" href="#">Следующая</a></li>
+				</ul>
+			</section>
+		</div>
 	</main>
 	<section class="map">
 		<div class="map__contacts">
@@ -150,14 +157,16 @@
 			</div>
 			<div class="map__marker"></div>
 		</section>
-	<footer class="main-footer">
-		<div class="social-btn">
-			<a href="#" class="social-btn__vk">Вконтакте</a>
-			<a href="#" class="social-btn__fb">Facebook</a>
-			<a href="#" class="social-btn__inst">Instagram</a>
-		</div>
-		<h3 class="main-footer__slogan">Давайте дружить, это выгодно!</h3>
-		<span class="main-footer__text">Скидка 10% для друзей из социальных сетей.</span>
-	</footer>
-</body>
-</html>
+		<footer class="main-footer">
+			<div class="container">
+				<div class="social-btn">
+					<a href="#" class="social-btn__vk">Вконтакте</a>
+					<a href="#" class="social-btn__fb">Facebook</a>
+					<a href="#" class="social-btn__inst">Instagram</a>
+				</div>
+				<h3 class="main-footer__slogan">Давайте дружить, это выгодно!</h3>
+				<span class="main-footer__text">Скидка 10% для друзей из социальных сетей.</span>
+			</div>
+		</footer>
+	</body>
+	</html>
