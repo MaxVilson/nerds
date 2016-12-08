@@ -4,51 +4,81 @@
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/min-style.css">
 	<title>Веб студия Нёрдс</title>
 </head>
 <body>
 	<header class="main-header">
 		<div class="container">
-			<div class="main-header__logo">
-				<img alt="" height="" src="" width="">
+			<div class="main-header__wrapper-top  clearfix">
+				<div class="main-header__logo  main-header__logo-inner-page">
+					<a href="index.html"><img src="img/logo.png" alt="Логотип" width="160" height="65"></a>
+				</div>
+				<nav class="main-nav">
+					<ul class="main-nav__list">
+						<li class="main-nav__item"><a class="main-nav__link" href="#studio">Студия</a></li>
+						<li class="main-nav__item"><a class="main-nav__link" href="#clients">Клиенты</a></li>
+						<li class="main-nav__item  main-nav__item-active"><a class="main-nav__link" href="catalog.html">Магазин</a></li>
+						<li class="main-nav__item"><a class="main-nav__link" href="#contacts">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="main-header__basket-item">Корзина</div>
 			</div>
-			<nav class="main-nav">
-				<ul class="main-nav__list">
-					<li class="main-nav__item"><a href="#">Студия</a></li>
-					<li class="main-nav__item"><a href="#">Клиенты</a></li>
-					<li class="main-nav__item"><a href="#">Магазин</a></li>
-					<li class="main-nav__item"><a href="#">Контакты</a></li>
-				</ul>
-				<div class="main-nav__basket-item">Корзина</div>
-			</nav>
 			<h1 class="main-header__title">Магазин готовых шаблонов</h1>
 		</div>
 	</header>
 	<main class="inner-main">
-		<div class="container">
+		<div class="container  clearfix">
 			<form action="a.php" class="form-sort">
-				<div class="form-sort__title">Стоимость:</div>
-				<div class="form-range">
-					<div class="form-range__scale"></div>
-					<div class="form-range__toggle-min"></div>
-					<div class="form-range__toggle-max"></div>
-				</div>
-				<div class="form-sort__price-controls">
-					<label class="form-sort__price-min">от <input type="text" value="0" name="min"></label>
-					<label class="form-sort__price-max">до <input type="text" value="15 000" name="max"></label>
-				</div>
-				<div class="form-sort__title">Сетка:</div>
-				<label class="form-sort__radio"><input type="radio" name="site" value="adaptive">Адаптивная</label>
-				<label class="form-sort__radio"><input type="radio" name="site" value="fixed">Фиксированная</label>
-				<label class="form-sort__radio"><input type="radio" name="site" value="rubber">Резиновая</label>
-				<div class="form-sort__title">Особенности:</div>
-				<label class="form-sort__checkbox"><input type="checkbox" name="feature" value="slider">Слайдер</label>
-				<label class="form-sort__checkbox"><input type="checkbox" name="feature" value="advantages">Блок преимуществ</label>
-				<label class="form-sort__checkbox"><input type="checkbox" name="feature" value="news">Новости</label>
-				<label class="form-sort__checkbox"><input type="checkbox" name="feature" value="gallery">Галерея</label>
-				<label class="form-sort__checkbox"><input type="checkbox" name="feature" value="basket">Корзина</label>
-				<input type="submit" value="Показать" class="btn  btn-inner--middle  btn--grey">
+
+				<fieldset class="form-sort__range">
+					<legend class="form-sort__title">Стоимость:</legend>
+					<div class="form-range">
+						<div class="form-range__scale"><div class="form-range__scale-bar"></div></div>
+						<div class="form-range__toggle  form-range__toggle-min"></div>
+						<div class="form-range__toggle  form-range__toggle-max"></div>
+					</div>
+					<div class="form-sort__price-control">
+						<label class="form-sort__price-min">от </label>
+						<input class="form-sort__range-input" type="text" value="0" name="min">
+						<label class="form-sort__price-max">до </label>
+						<input class="form-sort__range-input" type="text" value="15 000" name="max">
+					</div>
+				</fieldset>
+				
+				<fieldset class="form-sort__radio-wrapper">
+					<legend class="form-sort__title">Сетка:</legend>
+
+					<input class="form-sort__radio-input" type="radio" name="site" value="adaptive" id="adaptive" checked>
+					<label for="adaptive" class="form-sort__radio">Адаптивная</label>
+
+					<input class="form-sort__radio-input" type="radio" name="site" value="fixed" id="fixed">
+					<label for="fixed" class="form-sort__radio">Фиксированная</label>
+
+					<input class="form-sort__radio-input" type="radio" name="site" value="rubber" id="retina">
+					<label for="retina" class="form-sort__radio">Резиновая</label>
+				</fieldset>
+
+				<fieldset class="form-sort__checkbox-wrapper">
+					<legend class="form-sort__title">Особенности:</legend>
+
+					<input class="form-sort__checkbox-input" type="checkbox" name="feature" value="slider" id="slider" checked>
+					<label for="slider" class="form-sort__checkbox"><span class="form-sort__checkbox-border"></span>Слайдер</label>
+					
+					<input class="form-sort__checkbox-input" type="checkbox" name="feature" value="advantages" id="advantages">
+					<label for="advantages" class="form-sort__checkbox"><span class="form-sort__checkbox-border"></span>Блок преимуществ</label>
+					
+					<input class="form-sort__checkbox-input" type="checkbox" name="feature" value="news" id="news" checked>
+					<label for="news" class="form-sort__checkbox"><span class="form-sort__checkbox-border"></span>Новости</label>
+					
+					<input class="form-sort__checkbox-input" type="checkbox" name="feature" value="gallery" id="gallery">
+					<label for="gallery" class="form-sort__checkbox"><span class="form-sort__checkbox-border"></span>Галерея</label>
+					
+					<input class="form-sort__checkbox-input" type="checkbox" name="feature" value="basket" id="basket">
+					<label for="basket" class="form-sort__checkbox"><span class="form-sort__checkbox-border"></span>Корзина</label>
+				</fieldset>
+
+				<input type="submit" value="Показать" class="btn btn--grey  form-btn-inner--submit">
 			</form>
 			<section class="templates">
 				<div class="templates-sort">
@@ -59,114 +89,143 @@
 					<button class="templates-sort__first"></button>
 					<button class="templates-sort__end"></button>
 				</div>
-				<article class="template-sedona">
-					<div class="template-marker">
-						<div class="template-marker__marker1"></div>
-						<div class="template-marker__marker2"></div>
-						<div class="template-marker__marker3"></div>
+				<article class="template-wrapper">  
+					<div class="template-wrapper__marker">
+						<div class="template-wrapper__marker1"></div>
+						<div class="template-wrapper__marker2"></div>
+						<div class="template-wrapper__marker3"></div>
 					</div>
-					<img src="" alt="" width="" height="">
-					<div class="template-popup">
-						<div class="template-popup__title"><a href="#">Sedona</a></div>
-						<div class="template-popup__text">Информационный сайт для туристов</div>
-						<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
-					</div>
-				</article>
-				<article class="template-pink">
-					<div class="template-marker">
-						<div class="template-marker__marker1"></div>
-						<div class="template-marker__marker2"></div>
-						<div class="template-marker__marker3"></div>
-					</div>
-					<img src="" alt="" width="" height="">
-					<div class="template-popup">
-						<div class="template-popup__title"><a href="#">Pink App</a></div>
-						<div class="template-popup__text">Продуктовый лендинг приложения для IOS и Android</div>
-						<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
+					<div class="template-sedona">
+						<div class="template-popup">
+							<h3 class="template-popup__title"><a class="template-popup__title-link" href="#">Sedona</a></h3>
+							<div class="template-popup__text">Информационный сайт<br> для туристов</div>
+							<a href="#" class="btn  btn--red  btn-inner--small">9 900 руб.</a>
+						</div>
 					</div>
 				</article>
-				<article class="template-barbershop">
-					<div class="template-marker">
-						<div class="template-marker__marker1"></div>
-						<div class="template-marker__marker2"></div>
-						<div class="template-marker__marker3"></div>
+				<article class="template-wrapper">
+					<div class="template-wrapper__marker">
+						<div class="template-wrapper__marker1"></div>
+						<div class="template-wrapper__marker2"></div>
+						<div class="template-wrapper__marker3"></div>
 					</div>
-					<img src="" alt="" width="" height="">
-					<div class="template-popup">
-						<div class="template-popup__title"><a href="#">Barbershop</a></div>
-						<div class="template-popup__text">Сайт салона красоты. Для мужчин, да.</div>
-						<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
-					</div>
-				</article>
-				<article class="template-mishka">
-					<div class="template-marker">
-						<div class="template-marker__marker1"></div>
-						<div class="template-marker__marker2"></div>
-						<div class="template-marker__marker3"></div>
-					</div>
-					<img src="" alt="" width="" height="">
-					<div class="template-popup">
-						<div class="template-popup__title"><a href="#">Mishka</a></div>
-						<div class="template-popup__text">Интернет магазиг вязанных игрушек</div>
-						<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
+					<div class="template-pink">
+						<div class="template-popup">
+							<h3 class="template-popup__title"><a class="template-popup__title-link" href="#">Pink App</a></h3>
+							<div class="template-popup__text">Продуктовый лендинг<br> приложения для IOS и Android</div>
+							<a href="#" class="btn  btn--red  btn-inner--small">9 900 руб.</a>
+						</div>
 					</div>
 				</article>
-				<article class="template-aplus">
-					<div class="template-marker">
-						<div class="template-marker__marker1"></div>
-						<div class="template-marker__marker2"></div>
-						<div class="template-marker__marker3"></div>
+				<article class="template-wrapper">
+					<div class="template-wrapper__marker">
+						<div class="template-wrapper__marker1"></div>
+						<div class="template-wrapper__marker2"></div>
+						<div class="template-wrapper__marker3"></div>
 					</div>
-					<img src="" alt="" width="" height="">
-					<div class="template-popup">
-						<div class="template-popup__title"><a href="#">A Plus</a></div>
-						<div class="template-popup__text">Лендинг курсов повышения квалификации</div>
-						<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
+					<div class="template-barbershop">
+						<div class="template-popup">
+							<h3 class="template-popup__title"><a class="template-popup__title-link" href="#">Barbershop</a></h3>
+							<div class="template-popup__text">Сайт салона красоты.<br> Для мужчин, да.</div>
+							<a href="#" class="btn  btn--red  btn-inner--small">9 900 руб.</a>
+						</div>
 					</div>
 				</article>
-				<article class="template-kvas">
-					<div class="template-marker">
-						<div class="template-marker__marker1"></div>
-						<div class="template-marker__marker2"></div>
-						<div class="template-marker__marker3"></div>
+				<article class="template-wrapper">
+					<div class="template-wrapper__marker">
+						<div class="template-wrapper__marker1"></div>
+						<div class="template-wrapper__marker2"></div>
+						<div class="template-wrapper__marker3"></div>
 					</div>
-					<img src="" alt="" width="" height="">
-					<div class="template-popup">
-						<div class="template-popup__title"><a href="#">Кваст</a></div>
-						<div class="template-popup__text">Промо-сайт производителя крафтового кваса</div>
-						<a href="#" class="btn  btn-inner--small">9 900 руб.</a>
+					<div class="template-mishka">
+						<div class="template-popup">
+							<h3 class="template-popup__title"><a class="template-popup__title-link" href="#">Mishka</a></h3>
+							<div class="template-popup__text">Интернет-магазин<br> вязанных игрушек</div>
+							<a href="#" class="btn  btn--red  btn-inner--small">9 900 руб.</a>
+						</div>
+					</div>
+				</article>
+				<article class="template-wrapper">
+					<div class="template-wrapper__marker">
+						<div class="template-wrapper__marker1"></div>
+						<div class="template-wrapper__marker2"></div>
+						<div class="template-wrapper__marker3"></div>
+					</div>
+					<div class="template-aplus">
+						<div class="template-popup">
+							<h3 class="template-popup__title"><a class="template-popup__title-link" href="#">A Plus</a></h3>
+							<div class="template-popup__text">Лендинг курсов повышения<br> квалификации</div>
+							<a href="#" class="btn  btn--red  btn-inner--small">9 900 руб.</a>
+						</div>
+					</div>
+				</article>
+				<article class="template-wrapper">
+					<div class="template-wrapper__marker">
+						<div class="template-wrapper__marker1"></div>
+						<div class="template-wrapper__marker2"></div>
+						<div class="template-wrapper__marker3"></div>
+					</div>
+					<div class="template-kvas">
+						<div class="template-popup">
+							<h3 class="template-popup__title"><a class="template-popup__title-link" href="#">Кваст</a></h3>
+							<div class="template-popup__text">Промо-сайт производителя<br> крафтового кваса</div>
+							<a href="#" class="btn  btn--red  btn-inner--small">9 900 руб.</a>
+						</div>
 					</div>
 				</article>
 				<ul class="pagination">
-					<li class="pagination__item"><a class="pagination__link" href="#">1</a></li>
+					<li class="pagination__item  pagination__active"><a class="pagination__link" href="#">1</a></li>
 					<li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
 					<li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
-					<li class="pagination__item"><a class="btn  btn-inner--lg  btn--grey" href="#">Следующая</a></li>
+					<li class="pagination__item"><a class="btn  btn-inner--middle  btn--grey" href="#">Следующая</a></li>
 				</ul>
 			</section>
 		</div>
 	</main>
-	<section class="map">
-		<div class="map__contacts">
-			<h3 class="map__title">Nёrds design studio</h3>
-			<p class="map__text">
-				191186, Санкт-Петербург,<br>
-				ул. Б. Конюшенная, д.19/8</p>
-				<p class="map__phone">тел. +7(812)275-75-75</p>
-				<a href="#" class="btn  btn--middle">Напишите нам</a> 
+	<section class="contacts" id="contacts">
+		<div class="contacts__map" id="google-map"></div>
+		<div class="contacts__block">
+			<h3 class="contacts__title">Nёrds design studio</h3>
+			<p class="contacts__text">
+			191186, Санкт-Петербург,<br>
+			ул. Б. Конюшенная, д. 19/8</p>
+			<p class="contacts__phone">тел. +7 (812) 275-75-75</p>
+			<a href="#" class="btn  btn-popup  btn--red  btn--middle">Напишите нам</a> 
+		</div>
+	</section>
+	<footer class="main-footer">
+		<div class="container">
+			<div class="social-links">
+				<a href="#" class="social-btn   btn--red"><div class="social-btn__vk"></div>Вконтакте</a>
+				<a href="#" class="social-btn  btn--red"><div class="social-btn__fb"></div>Facebook</a>
+				<a href="#" class="social-btn  btn--red"><div class="social-btn__inst"></div>Instagram</a>
 			</div>
-			<div class="map__marker"></div>
-		</section>
-		<footer class="main-footer">
-			<div class="container">
-				<div class="social-btn">
-					<a href="#" class="social-btn__vk">Вконтакте</a>
-					<a href="#" class="social-btn__fb">Facebook</a>
-					<a href="#" class="social-btn__inst">Instagram</a>
-				</div>
+			<div class="main-footer__text-wrapper">
 				<h3 class="main-footer__slogan">Давайте дружить, это выгодно!</h3>
 				<span class="main-footer__text">Скидка 10% для друзей из социальных сетей.</span>
 			</div>
-		</footer>
-	</body>
-	</html>
+		</div>
+	</footer>
+	<div class="popup-feedback">
+	  <div class="popup-feedback__close"></div>		
+		<div class="popup-feedback__title">Напишите нам</div>
+		<form class="popup-feedback__form" action="a.php" method="get">
+			<div class="popup-feedback__wrapper">
+				<label class="popup-feedback__form-label" for="name">Ваше имя:</label>
+				<input class="popup-feedback__form-input  popup-feedback__form-input-name" type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">
+			</div>
+			<div class="popup-feedback__wrapper">
+				<label class="popup-feedback__form-label" for="email">Ваш e-mail:</label>
+				<input class="popup-feedback__form-input" type="text" name="email" id="email" placeholder="Для отправки ответа">
+			</div>
+			<div class="popup-feedback__wrapper">
+				<label class="popup-feedback__form-label" for="text">Текст письма:</label>
+				<textarea class="popup-feedback__form-textarea" name="text" id="text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+			</div>
+			<input class="btn  btn--red  btn-inner--submit" type="submit" value="Отправить">
+		</form>
+	</div>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false;key=AIzaSyBF8zGn3OexmUDScH4kKbnGLjtBiUH0DIk" ></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
